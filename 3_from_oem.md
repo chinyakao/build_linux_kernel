@@ -5,7 +5,7 @@ uname -r
 git clone https://git.launchpad.net/ubuntu/+source/linux-oem-5.14
 ```
 
-## Path 1
+## Fighting Path 1
 ### Create config file
 ```
 make x86_64_defconfig
@@ -65,7 +65,7 @@ lrwxrwxrwx  1 root root       23 十一 28 09:49 vmlinuz -> vmlinuz-5.14.0-1054-
 -rw-r--r--  1 root root 11066688 十一 28 12:30 vmlinuz-6.1.0-rc7
 lrwxrwxrwx  1 root root       23 十一 28 09:49 vmlinuz.old -> vmlinuz-5.14.0-1042-oem
 ```
-## Path 2
+## Fighting Path 2
 ### Copy system config file
 ```
 cp /boot/config-`uname -r` linux-oem-5.14/.config
