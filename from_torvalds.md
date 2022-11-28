@@ -1,6 +1,13 @@
-## Create config file
+# Build Linux Kernel from Linus Torvalds tree
+## Download the source
+```
+git clone https://github.com/torvalds/linux.git
+```
 
-`make x86_64_defconfig`
+## Create config file
+```
+make x86_64_defconfig
+```
 
 ## Create kernel deb package
 ```
