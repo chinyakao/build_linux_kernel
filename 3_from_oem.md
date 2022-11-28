@@ -5,32 +5,13 @@ uname -r
 git clone https://git.launchpad.net/ubuntu/+source/linux-oem-5.14
 ```
 
-## Create config file
-
-### Create default config file
+## Path 1
+### Create config file
 ```
 make x86_64_defconfig
 ```
 
-### Copy system config file
-```
-cp /boot/config-`uname -r` linux-oem-5.14/.config
-```
-
-Revise the following line in the config file
-```
-# (Original)
-CONFIG_SYSTEM_TRUSTED_KEYS="debian/canonical-certs.pem"
-CONFIG_SYSTEM_REVOCATION_KEYS="debian/canonical-revoked-certs.pem"
-```
-
-```
-# (Revised)
-CONFIG_SYSTEM_TRUSTED_KEYS=""
-CONFIG_SYSTEM_REVOCATION_KEYS=""
-```
-
-## Create kernel deb package
+### Create kernel deb package
 ```
 make bindeb-pkg -j $(nproc)
 ```
@@ -45,14 +26,14 @@ linux-upstream_5.14.21-1_amd64.buildinfo
 linux-upstream_5.14.21-1_amd64.changes
 ```
 
-## Install deb package
+### Install deb package
 ```
 sudo dpkg -i linux-headers-5.14.21_5.14.21-1_amd64.deb
 sudo dpkg -i linux-image-5.14.21_5.14.21-1_amd64.deb
 sudo dpkg -i linux-libc-dev_5.14.21-1_amd64.deb
 ```
 
-## Check /boot
+### Check /boot
 ```
 u@u-Vostro-3420:/boot$ ll
 total 292236
@@ -83,6 +64,24 @@ lrwxrwxrwx  1 root root       23 十一 28 09:49 vmlinuz -> vmlinuz-5.14.0-1054-
 -rw-r--r--  1 root root 10056224 十一 28 13:27 vmlinuz-5.14.21
 -rw-r--r--  1 root root 11066688 十一 28 12:30 vmlinuz-6.1.0-rc7
 lrwxrwxrwx  1 root root       23 十一 28 09:49 vmlinuz.old -> vmlinuz-5.14.0-1042-oem
+```
+## Path 2
+### Copy system config file
+```
+cp /boot/config-`uname -r` linux-oem-5.14/.config
+```
+
+Revise the following line in the config file
+```
+# (Original)
+CONFIG_SYSTEM_TRUSTED_KEYS="debian/canonical-certs.pem"
+CONFIG_SYSTEM_REVOCATION_KEYS="debian/canonical-revoked-certs.pem"
+```
+
+```
+# (Revised)
+CONFIG_SYSTEM_TRUSTED_KEYS=""
+CONFIG_SYSTEM_REVOCATION_KEYS=""
 ```
 
 ###### REF
