@@ -6,8 +6,23 @@ git clone https://git.launchpad.net/ubuntu/+source/linux-oem-5.14
 ```
 
 ## Create config file
+
+### Create default config file
 ```
 make x86_64_defconfig
+```
+
+### Copy system config file
+```
+cp /boot/config-`uname -r` linux-oem-5.14/.config
+```
+Revise the following line in the config
+```
+...
+CONFIG_SYSTEM_TRUSTED_KEYS=""
+...
+CONFIG_SYSTEM_REVOCATION_KEYS=""
+...
 ```
 
 ## Create kernel deb package
@@ -67,3 +82,7 @@ lrwxrwxrwx  1 root root       23 十一 28 09:49 vmlinuz.old -> vmlinuz-5.14.0-1
 
 ###### REF
 - https://code.launchpad.net/ubuntu/+source/linux-oem-5.14
+- Solve the error: `No rule to make target ‘debian/canonical-certs.pem‘, needed by ‘certs/x509_certificate_list‘`
+https://unix.stackexchange.com/questions/293642/attempting-to-compile-kernel-yields-a-certification-error/649484#649484
+- Solve the error: `/bin/sh: 1:zstd: not found`
+https://forum.openwrt.org/t/ubuntu-20-04-compile-zstd-error/66619
