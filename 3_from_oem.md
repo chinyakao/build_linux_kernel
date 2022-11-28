@@ -16,13 +16,18 @@ make x86_64_defconfig
 ```
 cp /boot/config-`uname -r` linux-oem-5.14/.config
 ```
-Revise the following line in the config
+
+Revise the following line in the config file
 ```
-...
+# (Original)
+CONFIG_SYSTEM_TRUSTED_KEYS="debian/canonical-certs.pem"
+CONFIG_SYSTEM_REVOCATION_KEYS="debian/canonical-revoked-certs.pem"
+```
+
+```
+# (Revised)
 CONFIG_SYSTEM_TRUSTED_KEYS=""
-...
 CONFIG_SYSTEM_REVOCATION_KEYS=""
-...
 ```
 
 ## Create kernel deb package
