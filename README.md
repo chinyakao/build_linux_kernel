@@ -5,4 +5,4 @@ build linux kernel from different sources and different config
 3. [Build from Ubuntu OEM](https://github.com/chinyakao/build_linux_kernel/blob/main/3_from_ubuntu_oem.md)
 
 ###### Acknowledgement
-The author wishes to acknowledge the help of mentor @cragw in commenting and teaching on the work.
+The author wishes to acknowledge the help of mentor [@cragw](https://github.com/CragW) in teaching the author and commenting on the work.
