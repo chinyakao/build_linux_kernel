@@ -1,4 +1,4 @@
-# Build Linux Kernel from Ubuntu Linux kernel OEM source tree
+# Build Linux Kernel from Ubuntu Linux Kernel OEM
 ## Check system kernel & Download the related source
 ```
 uname -r
