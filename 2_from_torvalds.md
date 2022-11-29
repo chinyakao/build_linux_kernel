@@ -1,4 +1,4 @@
-# Build Linux Kernel from Linus Torvalds tree
+# Build Linux Kernel from Linus Torvalds
 ## Download the source
 ```
 git clone https://github.com/torvalds/linux.git
