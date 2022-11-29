@@ -1,6 +1,6 @@
 # Build Kernel Module - dell_wmi_sysman
 Kernel Version: Linux u-Vostro-3420 5.14.0-1054-oem #61-Ubuntu SMP Fri Oct 14 13:05:50 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
-## Creaete Module
+## Create Module
 1. Download folder https://github.com/torvalds/linux/tree/master/drivers/platform/x86/dell/dell-wmi-sysman
 2. Download file https://github.com/torvalds/linux/blob/master/drivers/platform/x86/firmware_attributes_class.h
 3. Put them in same folder
@@ -30,7 +30,7 @@ sudo lsmod | grep "dell_wmi_sysman"
 ```
 and shows nothing
 
-## Install self build Module
+## Install self build module
 ```
 sudo insmod dell_wmi_sysman.ko
 sudo lsmod | grep "dell_wmi_sysman"
