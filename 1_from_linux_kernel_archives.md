@@ -74,5 +74,6 @@ qemu-system-x86_64 -nographic -no-reboot -kernel arch/x86/boot/bzImage -initrd v
 ```
 
 ###### REF
+- https://www.kernel.org/
 - https://github.com/maksimKorzh/cmk-linux
 - https://www.youtube.com/watch?v=1gEFYoGUFxM
