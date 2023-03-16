@@ -150,6 +150,17 @@ lrwxrwxrwx  1 root root       23 十一 28 09:49 vmlinuz.old -> vmlinuz-5.14.0-1
 uname -r
 ```
 
+###### Dependencies
+```
+sudo apt install make
+sudo apt install gcc
+sudo apt install flex
+sudo apt install bison
+sudo apt install dpkg-dev
+sudo apt install libssl-dev
+sudo apt install libelf-dev
+```
+
 ###### REF
 - https://code.launchpad.net/ubuntu/+source/linux-oem-5.14
 - Solve the error: `No rule to make target ‘debian/canonical-certs.pem‘, needed by ‘certs/x509_certificate_list‘`
