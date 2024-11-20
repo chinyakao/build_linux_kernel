@@ -152,13 +152,7 @@ uname -r
 
 ###### Dependencies
 ```
-sudo apt install make
-sudo apt install gcc
-sudo apt install flex
-sudo apt install bison
-sudo apt install dpkg-dev
-sudo apt install libssl-dev
-sudo apt install libelf-dev
+sudo apt install make gcc flex bison dpkg-dev libssl-dev libelf-dev zstd
 ```
 
 ###### REF
