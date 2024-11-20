@@ -43,7 +43,10 @@ sudo dpkg -i linux-image-xxx.deb
 
 ## Troubleshooting
 Follow the page: https://wiki.ubuntu.com/KernelTeam/GitKernelBuild
-But fail to build by the command `make -j $(getconf _NPROCESSORS_ONLN) deb-pkg`
+But fail to build by the command 
+```
+make -j $(getconf _NPROCESSORS_ONLN) deb-pkg
+```
 Error message
 ```
 dpkg-source: error: LC_ALL=C patch -t -F 0 -N -p1 -u -V never -E -b -B .pc/diff.patch/ --reject-file=- < mainline-crack.orig.v3iR7o/debian/patches/diff.patch subprocess returned exit status 1
