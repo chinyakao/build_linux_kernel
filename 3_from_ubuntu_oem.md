@@ -152,7 +152,7 @@ uname -r
 
 ###### Dependencies
 ```
-sudo apt install make gcc flex bison dpkg-dev libssl-dev libelf-dev zstd
+sudo apt install make gcc flex bison dpkg-dev libssl-dev libelf-dev zstd debhelper-compat
 ```
 
 ###### REF
