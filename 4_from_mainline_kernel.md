@@ -43,7 +43,8 @@ linux-upstream_xxx.changes
 sudo dpkg -i linux-image-xxx.deb
 ```
 
-### Check & boot into kernel
+### Check & boot into Target Kernel
+reboot and keep pressing f4 to get into GRUB to select tartget kernel
 
 ## Troubleshooting
 Follow the page: https://wiki.ubuntu.com/KernelTeam/GitKernelBuild
