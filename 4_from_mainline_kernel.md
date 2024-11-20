@@ -18,6 +18,10 @@ CONFIG_SYSTEM_REVOCATION_KEYS="debian/canonical-revoked-certs.pem"
 CONFIG_SYSTEM_TRUSTED_KEYS=""
 CONFIG_SYSTEM_REVOCATION_KEYS=""
 ```
+### Make config
+```
+make oldconfig
+```
 
 ### Create kernel deb package
 ```
