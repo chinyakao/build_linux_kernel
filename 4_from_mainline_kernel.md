@@ -2,6 +2,12 @@
 https://kernel.ubuntu.com/mainline/
 
 ## Build Step
+### Clone source code
+```
+git clone {source code link}
+git checkout {tag e.g., cod/mainline/v6.11.4}
+```
+
 ### Copy system config file
 ```
 cp /boot/config-`uname -r` .config
